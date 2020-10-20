@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="Welcome">
+  {{songs.album.album_name}}
+  {{songs.Album.album_name}}
+  {{songs.album_name}}
+</div>
+
+<div class="row flex-add">
+  {% for song in songs %}
+  <div class="card tesst">
+
+    <div class=" card-body">
+      <h5 class="card-title">{{song.song_name}}</h5>
+      <p class="card-text">{{song.created_date}}<br>
+      </p>
+
+    </div>
+  </div>
+
+
+
+  {% endfor %}
+
+</div>
+<div class="row flex-add">
+  <a href="{% url 'add_song' %}" class="btn btn-primary text-center">Add Songs</a>
+</div>
+
+{% else %}
+<h1 class="Welcome">You are not logged in!!!</h1>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block css %}
+<link rel="stylesheet" href="{% static 'media/login.css' %}">
+{% endblock %}
+{% block content %}
+
+
+<div class="login-holder">
+
+
+  <form class="" method="post">
+
+    {% csrf_token %}
+
+    <div class="input-group">
+      <label for="email-input"> Username </label>
+      <input type="text" name="username" id="email-input" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label for="password-input"> Password </label>
+      <input type="password" name="password" id="password-input" autocomplete="off">
+    </div>
+    <a href="#" class="forgot-password">forgot password ?</a>
+    <button class="signIn-btn">Sign in</button>
+
+    <button class="signIn-btn"><a href="{% url 'register' %}">Register</a> </button>
+  </form>
+</div>
+
+
+{% endblock %}

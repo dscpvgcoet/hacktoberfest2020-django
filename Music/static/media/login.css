@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --clr-background: #0B0C10;
+  --clr-primary: #66fcf1;
+  --clr-secondary: #2ec1ac;
+  --primary-shadow: -4px -4px 10px rgba(255, 255, 255, 0.05),
+    4px 4px 10px rgba(0, 0, 0, 0.5);
+  --secondary-shadow: -3px -3px 5px rgba(255, 255, 255, 0.05),
+    3px 3px 5px rgba(0, 0, 0, 0.5);
+  --inset-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.05),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.login-holder {
+  min-height: 100vh;
+  background-color: var(--clr-background);
+  font-family: "Century Gothic";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  width: 320px;
+  padding: 20px;
+  box-shadow: var(--primary-shadow);
+  position: relative;
+  border-radius: 20px;
+}
+
+h1 {
+  color: var(--clr-primary);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.input-group {
+  margin: 30px 0;
+}
+
+.input-group label {
+  display: block;
+  color: var(--clr-secondary);
+}
+
+.input-group input {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: var(--inset-shadow);
+  color: var(--clr-secondary);
+}
+
+.forgot-password {
+  display: block;
+  color: var(--clr-primary);
+  text-align: center;
+  text-transform: capitalize;
+  margin: 30px 0;
+  font-size: 14px;
+}
+
+.signIn-btn {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--clr-primary);
+  padding: 12px 60px;
+  box-shadow: var(--secondary-shadow);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signIn-btn a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+
+.signIn-btn:active {
+  box-shadow: var(--inset-shadow);
+}

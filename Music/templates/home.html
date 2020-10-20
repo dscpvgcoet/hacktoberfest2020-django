@@ -1,20 +1,18 @@
-<h2 align=center> Welcome to Music App </h2>
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="Welcome"> Welcome to Music App </h1>
 
-<table border="1">
-    <tr>
-        <td> Sr.No </td>
-        <td> Album Name </td>
-        <td> Album Artist </td>
-        <td> Genre </td>
-        <td> Created Date </td>
-    </tr>
-    {% for album in albums %}
-    <tr>
-        <td>{{album.id}}</td>
-        <td><a href="#">{{album.album_name}}</a></td>
-        <td> {{album.artist}}</td>
-        <td>{{album.genre}}</td>
-        <td>{{album.created_date}}</td>
-    </tr>
-    {% endfor %}
-</table>
+<div class="row flex-add">
+  {% for album in albums %}
+  <div class="card tesst">
+    <div class=" card-body">
+      <h5 class="card-title">{{album.album_name}}</h5>
+      <p class="card-text">{{album.artist}}<br>{{album.genre}}<br>{{album.created_date}}</p>
+      <a href="{% url 'albumdetail' album.pk %}" class="btn btn-primary">Go to Album</a>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+{% endblock %}
