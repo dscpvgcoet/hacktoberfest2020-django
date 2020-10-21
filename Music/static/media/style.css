@@ -1,0 +1,61 @@
+/*Basic Settings*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #0B0C10;
+  color: #C5C6C7;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* navigation */
+.nav-edit {
+  background-color: #1f2833;
+  color: #66fcf1;
+}
+
+.nav-edit a {
+  text-decoration: none;
+  color: #66fcf1;
+}
+
+/* navigation-end */
+.Welcome {
+  text-align: center;
+  color: #66fcf1;
+  font-size: 60px;
+  padding: 45px;
+}
+
+.flex-add {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* #862657
+#45a29e
+*/
+.tesst {
+  margin: 10px 10px;
+  background-color: #862657;
+}
+
+.card {
+  width: 300px;
+}

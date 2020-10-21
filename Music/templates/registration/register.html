@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block css %}
+<link rel="stylesheet" href="{% static 'media/login.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="login-holder">
+
+
+  <form class="" method="post">
+
+    {% csrf_token %}
+
+    <div class="input-group">
+      <label for="user-input"> Username </label>
+      <input type="text" name="username" id="user-input" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label for="email-input"> Email </label>
+      <input type="email" name="email" id="email-input" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label for="first-input"> First Name </label>
+      <input type="text" name="first_name" id="first-input" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label for="last-input"> Last Name</label>
+      <input type="text" name="last_name" id="last-input" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label for="password-input"> Password </label>
+      <input type="password" name="password1" id="password-input" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label for="password1-input"> Confirm Password </label>
+      <input type="password" name="password2" id="password1-input" autocomplete="off">
+    </div>
+    <!-- <a href="#" class="forgot-password">forgot password ?</a> -->
+    <button class="signIn-btn">Sign in</button>
+  </form>
+</div>
+
+
+{% endblock %}

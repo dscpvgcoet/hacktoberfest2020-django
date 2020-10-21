@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block css %}
+<link rel="stylesheet" href="{% static 'media/login.css' %}">
+{% endblock %}
+{% if user.is_authenticated %}
+{% block content %}
+
+
+<div class="login-holder">
+
+
+  <form class="" method="post">
+
+    {% csrf_token %}
+
+
+    <div class="input-group">
+      <label for="album-input"> Album Name </label>
+      <input type="text" name="album" id="album-input" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label for="song_name-input"> Song name </label>
+      <input type="text" name="song_name" id="song_name-input" autocomplete="off">
+    </div>
+    <div class="input-group">
+      <label for="created_date-input"> Created date </label>
+      <input type="date" name="created_date" id="created_date-input" autocomplete="off">
+    </div>
+
+    <button class="signIn-btn">Add Song</button>
+
+  </form>
+
+</div>
+{% endblock %}
+{% else %}
+<h1 class="Welcome">You are not logged in!!!</h1>
+{% endif %}

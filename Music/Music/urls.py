@@ -19,5 +19,6 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('media.urls'))
+    path('templates/registration/', include('django.contrib.auth.urls')),
+    path('', include('media.urls')),
 ]
