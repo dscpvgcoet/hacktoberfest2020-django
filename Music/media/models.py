@@ -4,6 +4,7 @@ from django.db import models
 class Album(models.Model):
     artist = models.CharField(max_length=40,null=False)
     album_name = models.CharField(max_length=30,null=False)
+    cover = models.ImageField(upload_to="albumcovers",blank=True)
     genre = models.CharField(max_length=40)
     created_date = models.DateField()
 

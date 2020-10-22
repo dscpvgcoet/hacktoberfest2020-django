@@ -25,9 +25,10 @@ class AlbumForm(forms.ModelForm):
 
     class Meta:
         model = Album
-        fields = ('artist', 'album_name', 'genre', 'created_date')
+        fields = ('artist', 'album_name', 'genre', 'created_date','cover')
 
         widgets = {
+            'cover':forms.ImageField(),
             'artist': forms.TextInput(),
             'album_name': forms.TextInput(),
             'genre': forms.TextInput()
